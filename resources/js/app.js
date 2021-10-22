@@ -1,5 +1,6 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
+import { InertiaProgress } from '@inertiajs/progress'
 
 require('./bootstrap')
 
@@ -11,3 +12,5 @@ createInertiaApp({
         app.use(plugin).mount(el)
     }
 })
+
+InertiaProgress.init()
