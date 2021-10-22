@@ -5,7 +5,7 @@ import { InertiaProgress } from '@inertiajs/progress'
 require('./bootstrap')
 
 createInertiaApp({
-    resolve: name => require(`./pages/${name}`),
+    resolve: name => import(`./pages/${name}`),
     setup ({ el, App, props, plugin }) {
         const app = createApp({ render: () => h(App, props) })
         app.config.globalProperties.$route = window.route
